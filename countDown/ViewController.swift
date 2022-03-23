@@ -28,6 +28,13 @@ class ViewController: UIViewController {
     @objc func timerFunc() {
         label.text = "Time : \(remainingTime)"
         remainingTime -= 1
+        
+        if remainingTime == 0 {
+            label.text = "Time is done!"
+            timer.invalidate()
+            remainingTime = 15
+            
+        }
     }
 }
 
